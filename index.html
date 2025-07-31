@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Patil - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #c9d1d9; /* Light text */
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url('Prakash_hero.jpeg') no-repeat center center/cover;
+<<<<<<< HEAD
+=======
+            position: relative; /* Added for absolute positioning of content */
+>>>>>>> 2f71e46 (Update)
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #22d3ee; /* Cyan accent */
+            border-radius: 2px;
+        }
+
+        .card {
+            background-color: #161b22; /* Slightly lighter dark for cards */
+            border: 1px solid #30363d;
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.3); /* Glowing effect */
+            border-color: #22d3ee;
+        }
+        
+        .skill-badge {
+            background-color: rgba(34, 211, 238, 0.1);
+            color: #22d3ee;
+            border: 1px solid #22d3ee;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 85%;
+            max-height: 85%;
+            animation: zoomIn 0.3s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover, .close:focus {
+            color: #22d3ee;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+<<<<<<< HEAD
+    <!-- Header -->
+    <header class="bg-[#161b22]/80 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Prakash Patil</a>
+=======
+    <header class="bg-[#161b22]/80 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex items-center">
+            <a href="#" class="text-2xl font-bold text-white mr-auto">Prakash Patil</a>
+>>>>>>> 2f71e46 (Update)
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                <a href="#certificates" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Certificates</a>
+<<<<<<< HEAD
+                <a href="#contact" class="bg-cyan-500 text-white px-5 py-2 rounded-md hover:bg-cyan-600 transition-colors duration-300 font-semibold">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+=======
+                <a href="#resume" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Resume</a>
+                <a href="#contact" class="bg-cyan-500 text-white px-5 py-2 rounded-md hover:bg-cyan-600 transition-colors duration-300 font-semibold">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none ml-auto">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+>>>>>>> 2f71e46 (Update)
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-gray-300 hover:bg-slate-700 rounded-md px-3">About</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:bg-slate-700 rounded-md px-3">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:bg-slate-700 rounded-md px-3">Projects</a>
+            <a href="#certificates" class="block py-2 text-gray-300 hover:bg-slate-700 rounded-md px-3">Certificates</a>
+<<<<<<< HEAD
+=======
+            <a href="#resume" class="block py-2 text-gray-300 hover:bg-slate-700 rounded-md px-3">Resume</a>
+>>>>>>> 2f71e46 (Update)
+            <a href="#contact" class="block mt-2 bg-cyan-500 text-white px-4 py-2 rounded-md text-center hover:bg-cyan-600">Contact</a>
+        </div>
+    </header>
+
+<<<<<<< HEAD
+    <!-- Hero Section -->
+    <section id="home" class="hero-section h-screen flex items-center justify-center text-center -mt-20">
+        <div class="container mx-auto px-6 reveal">
+<!--             <img src="profile.jpeg" alt="Prakash Patil" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-cyan-400 shadow-lg shadow-cyan-500/20"> -->
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white">Prakash Patil</h1>
+            <p class="text-xl md:text-2xl font-light text-cyan-400">Software Developer</p>
+=======
+    <section id="home" class="hero-section h-screen flex items-end pb-20 pl-6">
+        <div class="container mx-auto px-6 reveal text-left">
+            <h1 class="text-5xl md:text-7xl font-bold text-white">
+                <span>Prakash</span> <br class="md:hidden"> <span class="block">Patil</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-cyan-400 mb-6">Software Developer</p>
+>>>>>>> 2f71e46 (Update)
+            <a href="#about" class="mt-8 inline-block bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-md hover:bg-cyan-400 hover:text-white transition-all duration-300 text-lg">
+                Discover More <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+<<<<<<< HEAD
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- About Section -->
+=======
+    <main class="container mx-auto px-6 py-12">
+
+>>>>>>> 2f71e46 (Update)
+        <section id="about" class="mb-24 scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">About Me</h2>
+            <div class="bg-[#161b22] p-8 rounded-lg shadow-lg max-w-4xl mx-auto text-center border border-slate-800">
+                <p class="text-lg leading-relaxed">
+                    I am a dedicated and passionate MCA student with a strong foundation in building and supporting smart tech solutions. My expertise lies in Java, Spring Boot, and Angular, complemented by hands-on project experience. I am a quick learner, always eager to embrace new challenges and contribute to innovative software development and robust IT support.
+                </p>
+            </div>
+        </section>
+
+<<<<<<< HEAD
+        <!-- Skills Section -->
+=======
+>>>>>>> 2f71e46 (Update)
+        <section id="skills" class="mb-24 scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">Professional Skills</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-400"><i class="fas fa-code mr-2"></i>Languages & Frameworks</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Java</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Spring Boot</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Angular</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Python</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">C++</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-400"><i class="fas fa-laptop-code mr-2"></i>Web & Databases</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">HTML</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">CSS</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">JavaScript</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">SQL (MySQL)</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">MongoDB</span>
+                    </div>
+                </div>
+                 <div class="card p-6 md:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-400"><i class="fas fa-tools mr-2"></i>Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Git & GitHub</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">AWS</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Salesforce</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">Google Cloud</span>
+                        <span class="skill-badge font-medium py-1 px-3 rounded-full text-sm">NetBeans</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<<<<<<< HEAD
+        <!-- Projects Section -->
+=======
+>>>>>>> 2f71e46 (Update)
+        <section id="projects" class="mb-24 scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-cyan-400">Book Store</h3>
+                        <p class="text-gray-400 mb-4 h-24">Developed a dynamic and modern online bookstore platform leveraging Java, Spring Boot, and Angular.</p>
+                        <a href="https://prakash7277.github.io/bookstore" target="_blank" class="font-semibold text-white hover:text-cyan-400 transition">View Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-cyan-400">User API</h3>
+                        <p class="text-gray-400 mb-4 h-24">Implemented API integration and CRUD operations using Angular, Spring, and Railway Cloud.</p>
+                        <a href="https://prakash7277.github.io/user-register" target="_blank" class="font-semibold text-white hover:text-cyan-400 transition">View Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="card rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-cyan-400">Gas Booking System</h3>
+                        <p class="text-gray-400 mb-4 h-24">A comprehensive desktop application using Java Swing for the GUI and MySQL for database management.</p>
+<<<<<<< HEAD
+                        <span class="text-gray-500">Link not available</span>
+=======
+                        <a href="https://github.com/Prakash7277/gas_booking" target="_blank" class="font-semibold text-white hover:text-cyan-400 transition">View Source Code <i class="fas fa-arrow-right ml-1"></i></a>
+>>>>>>> 2f71e46 (Update)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<<<<<<< HEAD
+        <!-- Certificates Section -->
+=======
+>>>>>>> 2f71e46 (Update)
+        <section id="certificates" class="mb-24 scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('full_stack_aws.jpg')">
+                    <img src="full_stack_aws.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Full Stack Development</h3></div>
+                </div>
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('java_ibm.jpg')">
+                    <img src="java_ibm.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Java Fundamentals</h3></div>
+                </div>
+<<<<<<< HEAD
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('sql.jpg')">
+                    <img src="sql.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Foundation with SQL</h3></div>
+                </div>
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('Web_dev.jpg')">
+                    <img src="Web_dev.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Web Designing Essential</h3></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal for Certificates -->
+=======
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('RDBMS.jpg')">
+                    <img src="RDBMS.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">RDBMS PostgreSQL Training</h3></div>
+                </div>
+                <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('Deloitte.PNG')">
+                    <img src="Deloitte.PNG" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Deloitte Technology Job Simulation</h3></div>
+                </div>
+                <!-- <div class="card rounded-lg overflow-hidden cursor-pointer" onclick="openModal('Web_dev.jpg')">
+                    <img src="Web_dev.jpg" alt="Certificate" class="w-full h-40 object-cover">
+                    <div class="p-4"><h3 class="font-semibold text-white">Web Designing Essential</h3></div>
+                </div> -->
+            </div>
+        </section>
+        
+>>>>>>> 2f71e46 (Update)
+        <div id="certificateModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+<<<<<<< HEAD
+        <!-- Contact Section -->
+=======
+        <section id="resume" class="mb-24 scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">My Resume</h2>
+            <div class="card max-w-3xl mx-auto p-8 text-center">
+                <p class="text-lg mb-6">You can view or download my full resume for more details on my experience and qualifications.</p>
+                <a href="Prakash-Patil-FlowCV-Resume-20250718.pdf" target="_blank" class="inline-block bg-cyan-500 text-white px-8 py-3 rounded-md hover:bg-cyan-600 transition-colors duration-300 font-semibold text-lg">
+                    View Resume <i class="fas fa-file-alt ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+
+>>>>>>> 2f71e46 (Update)
+        <section id="contact" class="scroll-mt-20 reveal">
+            <h2 class="text-4xl font-bold text-center text-white section-title">Get In Touch</h2>
+            <div class="card max-w-3xl mx-auto p-8 text-center">
+                <p class="text-lg mb-6">I'm currently seeking new opportunities. My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+                <a href="mailto:pkpatil.366@gmail.com" class="inline-block bg-cyan-500 text-white px-8 py-3 rounded-md hover:bg-cyan-600 transition-colors duration-300 font-semibold text-lg">
+                    Say Hello
+                </a>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="https://github.com/Prakash7277" target="_blank" class="text-gray-400 hover:text-cyan-400 text-3xl transition-colors duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/prakash-patil-59b030257/" target="_blank" class="text-gray-400 hover:text-cyan-400 text-3xl transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+919145739978" class="text-gray-400 hover:text-cyan-400 text-3xl transition-colors duration-300"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<<<<<<< HEAD
+    <!-- Footer -->
+=======
+>>>>>>> 2f71e46 (Update)
+    <footer class="text-center p-6 mt-12 border-t border-slate-800">
+        <p>&copy; 2025 Prakash Patil. Designed & Built with <i class="fas fa-heart text-cyan-400"></i>.</p>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // --- Modal Functionality ---
+        const modal = document.getElementById('certificateModal');
+        const modalImg = document.getElementById('modalImage');
+        function openModal(imgSrc) {
+            modal.style.display = "flex";
+            modalImg.src = imgSrc;
+        }
+        function closeModal() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after revealing to save resources
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 2f71e46 (Update)
